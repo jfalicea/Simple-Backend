@@ -9,4 +9,4 @@ const options = {
     database: 'coffee-orders-app',
 };
 const db = pgp(options);
-module.export = db; 
+module.exports = db; 

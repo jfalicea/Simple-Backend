@@ -7,7 +7,7 @@ class Coffee{
         this.orders = orders;
         this.size = size;
     }
-    static getById(id){
+    static getByID(id){
         return db.one(`select*from coffee where id=${id}`)
             .then((oneCoffeeData)=>{
                 const coffeeInstance = new Coffee(oneCoffeeData.id, oneCoffeeData.name, oneCoffeeData.orders, oneCoffeeData.size);

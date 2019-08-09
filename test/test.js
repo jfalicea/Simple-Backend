@@ -12,16 +12,14 @@ describe('Sanity Check', ()=>{
         expect(1+1).to.equal(2);
     });
 
-    it('Should be 3', ()=>{
-        assert.equal(3, 2+1);
-        expect(2+1).to.equal(3);
-    });
-
+  
 });
 
 
-describe('Coffee Model', async()=>{
-    const  coffeeData = await Coffee.getByID(3);
-    console.log(coffeeData)
-    expect(coffeeData).to.be.an.instanceOf(Coffee);    
+describe('Coffee Model', ()=>{
+    it('something here', async()=>{
+        const  coffeeData = await Coffee.getByID(3);
+        console.log(coffeeData)
+        expect(coffeeData).to.be.an.instanceOf(Coffee);  
+    })
 });
